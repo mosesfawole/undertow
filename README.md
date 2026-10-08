@@ -135,7 +135,7 @@ These are transparent **descriptive heuristics**, not trained models or calibrat
 npm test
 ```
 
-22 automated tests cover normalization, deduplication, chronological replay prefixes, malformed and missing data, multi-leg exclusion, the sample counterfactual, empty data, export provenance, missing credentials, protected local files, documented query parameters, caching, input validation, cross-origin rejection, upstream errors session filtering, every-alert influence rankings, insufficient evidence, immutable replay subsets, case roundtrips, export field allowlists and malformed case rejection.
+22 automated tests cover normalization, deduplication, chronological replay prefixes, malformed and missing data, multi-leg exclusion, the sample counterfactual, empty data, export provenance, missing credentials, protected local files, documented query parameters, caching, input validation, cross-origin rejection, upstream errors, session filtering, every-alert influence rankings, insufficient evidence, immutable replay subsets, case roundtrips, export field allowlists and malformed case rejection.
 
 Browser checks covered desktop and 390px mobile layouts, all three cases, slider boundaries, premium filters, removing/restoring the largest alert, alert details, notebook persistence, the field guide, a downloaded Markdown export, export preview and missing-key feedback. No JavaScript errors were observed during these checks. The v1.1 browser pass also checked arbitrary exclusions, actual case download and reimport, restored provenance and replay boundaries.
 
