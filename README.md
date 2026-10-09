@@ -5,7 +5,7 @@ Undertow turns an options-flow alert sample into an interactive investigation. R
 
 **The central question: does your market story survive without one influential alert?**
 
-[See the working demo screenshots](docs/DEMO.md) · [Submission draft](SUBMISSION.md)
+[See the working demo screenshots](docs/DEMO.md) · [Submitted entry](SUBMISSION.md)
 
 **Start here:** run `npm start`, then open **http://127.0.0.1:4173**.
 
@@ -143,12 +143,12 @@ npm test
 
 Browser checks covered desktop and 390px mobile layouts, all three cases, slider boundaries, premium filters, removing/restoring the largest alert, alert details, notebook persistence, the field guide, a downloaded Markdown export, export preview and missing-key feedback. No JavaScript errors were observed during these checks. The v1.1 browser pass also checked arbitrary exclusions, actual case download and reimport, restored provenance and replay boundaries. A live desktop smoke test on 9 October loaded 200 API alerts, rendered all 200 removal scenarios, applied an exclusion to leave 199 alerts, and verified the export preview and live source label. See [live browser verification](docs/live-ui-check.json).
 
-## Before submitting
+## Hackathon submission
 
-The source and demo are ready for review. The hackathon entry itself has not been posted.
+**Submitted on 9 October 2026:** [Hackathon1: Undertow — Follow the Evidence](https://discord.com/channels/710524439133028512/1557955284125618266), in the organizer's `vibe-and-api-projects` forum, with `hackathon` and `dashboards` tags, demo image links, source and setup instructions.
 
-1. Confirm the exact deadline with the organizer. Hacklist listed 23 October 2026, but the official page only said “one month” when checked.
+1. The official deadline is **23 October 2026, 11:59 p.m. Eastern** (24 October, 03:59 UTC / 05:59 Berlin), confirmed in the organizer's rules and 8 October Discord reminder. Review the [entry requirements](docs/ENTRY-RULES.md) before posting.
 2. Live access and analysis have been verified locally. Each reviewer needs their own API access for live data; the synthetic demo remains available without a key.
 3. Review the working screenshots in `docs/DEMO.md` and the GitHub source repository. The official page accepts images instead of a video.
 4. Use synthetic data for a public hosted demo unless you have data redistribution permission. The official API page restricts personal-tier redistribution.
-5. Review the draft in `SUBMISSION.md`, which includes the repository and screenshot links, then submit through the organizer's prescribed channel.
+5. `SUBMISSION.md` contains the project description. The [submission record](docs/submission.json) identifies the published thread. Review the post-entry obligations in `docs/ENTRY-RULES.md`, including removal of public entry files after the event.

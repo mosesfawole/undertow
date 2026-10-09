@@ -1,6 +1,6 @@
 # Hackathon1: Undertow — Follow the Evidence
 
-Draft entry. Not submitted. Authenticated API access and analysis verified on 9 October 2026.
+**Submitted on 9 October 2026:** [view the Discord entry](https://discord.com/channels/710524439133028512/1557955284125618266). Authenticated API access and analysis were verified before posting.
 
 ## What it does
 
@@ -45,9 +45,10 @@ For personal API use, copy `.env.example` to `.env`, set `UW_API_KEY`, restart, 
 - All published observations and screenshots are synthetic. Licensed API snapshots are for personal local use unless redistribution is permitted.
 - The ±20% balance thresholds are descriptive heuristics. No price predictions, calibrated confidence, returns, or trader-intent claims.
 
-## Remaining entry steps
+## Submission record
 
-1. Confirm the exact cutoff with the organizer. The official page, checked 9 October 2026, still says only “one month.” Hacklist's 23 October listing is not official confirmation.
-2. Post the entry with screenshots and repository link in the organizer's `vibe-and-api-projects` channel using the `Hackathon1:` title prefix.
+The entry was published in `vibe-and-api-projects` with the required `Hackathon1:` title, `hackathon` and `dashboards` tags, two direct synthetic screenshot links, the demo page, GitHub repository and setup instructions. The published post was verified in Discord.
+
+The confirmed deadline is **23 October 2026 at 11:59 p.m. Eastern** (24 October at 05:59 Berlin). Review the [official entry requirements and post-event obligations](docs/ENTRY-RULES.md). Publication records submission; it does not establish acceptance by judges or a prize result.
 
 [Official event instructions](https://unusualwhales.com/information/2026-unusual-whales-hackathon)
