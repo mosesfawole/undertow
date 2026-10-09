@@ -1,0 +1,16 @@
+{
+  "checkedAt": "2026-10-09T02:53:17.657Z",
+  "surface": "Local Undertow app in browser",
+  "checks": {
+    "liveLoad": true,
+    "alertCount": 200,
+    "renderedRemovalScenarios": 200,
+    "applyScenario": true,
+    "remainingAlerts": 199,
+    "exportPreview": true,
+    "liveProvenanceLabel": true,
+    "caseDownloadControl": true,
+    "planCopy": true
+  },
+  "scope": "Desktop live UI smoke test. No live market snapshots, screenshots or export files are retained in the repository."
+}

@@ -50,4 +50,4 @@ The stress lab also works at a 390-pixel mobile viewport:
 
 ![Mobile stress lab](screenshots/05-mobile-stress-lab.png)
 
-The Unusual Whales adapter uses the documented Flow Alerts schema and is covered by mocked integration tests. A real authenticated request is still pending an API key. No runtime LLM or UW MCP connection is claimed.
+The Unusual Whales adapter uses the documented Flow Alerts schema and is covered by mocked integration tests. On 9 October 2026, a real authenticated request returned 200 usable NVDA alerts with no rejected or duplicate rows. Analysis, every-alert removal, replay subsets, in-memory case roundtrip and field-note export passed on that sample. [Connection metadata](live-api-check.json) and [analysis metadata](live-analysis-check.json) retain only verification results. Public screenshots and cases remain synthetic. No runtime LLM or UW MCP connection is claimed.

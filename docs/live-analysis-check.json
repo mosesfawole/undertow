@@ -1,0 +1,18 @@
+{
+  "checkedAt": "2026-10-09T02:48:47.557Z",
+  "ticker": "NVDA",
+  "sessionDate": "2026-10-08",
+  "normalizedAlerts": 200,
+  "checks": {
+    "finiteStatistics": true,
+    "linkedNarrativeEvidence": true,
+    "largestAlertRemoval": true,
+    "everyAlertRemoval": true,
+    "replaySubset": true,
+    "caseRoundtrip": true,
+    "importedProvenance": true,
+    "fieldNoteExport": true,
+    "inputImmutability": true
+  },
+  "evidenceScope": "Verification metadata only. Live observations, identifiers, prices, case files and field notes were not saved."
+}

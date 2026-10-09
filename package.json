@@ -6,7 +6,8 @@
   "description": "A replayable, evidence-first options-flow field guide powered by Unusual Whales.",
   "scripts": {
     "start": "node --env-file-if-exists=.env server.mjs",
-    "test": "node --test test/*.test.mjs"
+    "test": "node --test test/*.test.mjs",
+    "check:api": "node --env-file-if-exists=.env scripts/check-api.mjs"
   },
   "engines": {
     "node": ">=22.9"

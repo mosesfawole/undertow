@@ -30,7 +30,7 @@ export function createServer({apiKey=process.env.UW_API_KEY || '',fetchImpl=fetc
             upstream.searchParams.set('ticker_symbol',ticker);
             upstream.searchParams.set('limit','200');
             upstream.searchParams.set('min_premium','10000');
-            const response=await fetchImpl(upstream,{headers:{Authorization:'Bearer '+apiKey,Accept:'application/json'},signal:AbortSignal.timeout(12000)});
+            const response=await fetchImpl(upstream,{redirect:'error',headers:{Authorization:'Bearer '+apiKey,Accept:'application/json'},signal:AbortSignal.timeout(12000)});
             if(!response.ok) {
               const e=new Error(response.status===401 || response.status===403?'The API rejected access. Check your key, plan and endpoint permissions.':response.status===429?'Unusual Whales rate limit reached. Wait before retrying.':'The data provider is temporarily unavailable.');
               e.status=response.status===429?429:502; throw e;
@@ -68,4 +68,3 @@ if(process.argv[1] && path.resolve(process.argv[1])===fileURLToPath(import.meta.
   const port=Number(process.env.PORT || 4173);
   createServer().listen(port,'127.0.0.1',()=>console.log('Undertow is ready at http://127.0.0.1:'+port));
 }
-

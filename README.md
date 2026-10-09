@@ -75,7 +75,11 @@ PORT=4173
 
 The status check only confirms a key is configured. Loading an actual ticker verifies authorization. The key never goes to the browser, into exported notes, or into application logs. Do not paste it into a chat or commit `.env`.
 
-The official API page advertised a **seven-day trial followed by $150/month** for the Basic plan when checked on 7 October 2026. Read current terms before starting a trial. API trial keys are eligible for the hackathon according to its official project page.
+An organizer promo code is redeemed at checkout; the separate API token belongs in `UW_API_KEY`. See [API-ACTIVATION.md](API-ACTIVATION.md) for the organizer-offer setup and verified token-management link.
+
+After configuring the token, run `npm run check:api -- NVDA --record`. This exercises the same proxy and normalizer as the application, and saves only verification metadata to `docs/live-api-check.json`. Exit code 0 means a nonempty authenticated sample passed; exit code 2 means access or usable-data verification remains incomplete. An empty response does not count as a successful live-analysis check.
+
+Check the current plan, discount and renewal terms in your account before activating access. The organizer supplied a one-month Advanced offer; the public monthly Advanced price was $375 when checked on 9 October 2026. API trial keys are eligible for the hackathon according to its official project page.
 
 ### API contract
 
@@ -87,7 +91,7 @@ Authorization: Bearer YOUR_API_KEY
 
 The server normalizes the documented `data` array, sorts timestamps, removes duplicate alert IDs, filters to the requested ticker and keeps only the latest returned UTC date. This is a **partial snapshot**, not a full session or streaming feed. It does not paginate earlier trades. Provider errors never silently switch to synthetic data.
 
-The adapter is implemented and tested against mocked documented response shapes. **A real authenticated request has not been verified because no API key was supplied.**
+**Live API access verified on 9 October 2026:** the authenticated endpoint returned 200 usable NVDA alerts for the latest returned UTC date, 8 October, with no rejected or duplicate rows. Analysis, every-alert removal, replay subsets, in-memory case roundtrip and field-note export also passed against that sample. See [connection metadata](docs/live-api-check.json) and [analysis metadata](docs/live-analysis-check.json). These files contain verification counts and results, not licensed observations or credentials.
 
 Official references:
 - [Flow Alerts schema](https://api.unusualwhales.com/docs/api/option-trade/flow-alerts)
@@ -135,17 +139,16 @@ These are transparent **descriptive heuristics**, not trained models or calibrat
 npm test
 ```
 
-22 automated tests cover normalization, deduplication, chronological replay prefixes, malformed and missing data, multi-leg exclusion, the sample counterfactual, empty data, export provenance, missing credentials, protected local files, documented query parameters, caching, input validation, cross-origin rejection, upstream errors, session filtering, every-alert influence rankings, insufficient evidence, immutable replay subsets, case roundtrips, export field allowlists and malformed case rejection.
+28 automated tests cover normalization, deduplication, chronological replay prefixes, malformed and missing data, multi-leg exclusion, the sample counterfactual, empty data, export provenance, missing credentials, protected local files, documented query parameters, caching, input validation, cross-origin rejection, upstream errors, session filtering, every-alert influence rankings, insufficient evidence, immutable replay subsets, case roundtrips, export field allowlists, malformed case rejection, and the connection-check command's success, authentication-failure, empty-sample and changed-schema cases.
 
-Browser checks covered desktop and 390px mobile layouts, all three cases, slider boundaries, premium filters, removing/restoring the largest alert, alert details, notebook persistence, the field guide, a downloaded Markdown export, export preview and missing-key feedback. No JavaScript errors were observed during these checks. The v1.1 browser pass also checked arbitrary exclusions, actual case download and reimport, restored provenance and replay boundaries.
+Browser checks covered desktop and 390px mobile layouts, all three cases, slider boundaries, premium filters, removing/restoring the largest alert, alert details, notebook persistence, the field guide, a downloaded Markdown export, export preview and missing-key feedback. No JavaScript errors were observed during these checks. The v1.1 browser pass also checked arbitrary exclusions, actual case download and reimport, restored provenance and replay boundaries. A live desktop smoke test on 9 October loaded 200 API alerts, rendered all 200 removal scenarios, applied an exclusion to leave 199 alerts, and verified the export preview and live source label. See [live browser verification](docs/live-ui-check.json).
 
 ## Before submitting
 
 The source and demo are ready for review. The hackathon entry itself has not been posted.
 
 1. Confirm the exact deadline with the organizer. Hacklist listed 23 October 2026, but the official page only said “one month” when checked.
-2. Connect your own API key and verify a real response before claiming live-data validation.
+2. Live access and analysis have been verified locally. Each reviewer needs their own API access for live data; the synthetic demo remains available without a key.
 3. Review the working screenshots in `docs/DEMO.md` and the GitHub source repository. The official page accepts images instead of a video.
 4. Use synthetic data for a public hosted demo unless you have data redistribution permission. The official API page restricts personal-tier redistribution.
-5. Review the draft in `SUBMISSION.md`, fill the real repository/demo links, then submit through the organizer's prescribed channel.
-
+5. Review the draft in `SUBMISSION.md`, which includes the repository and screenshot links, then submit through the organizer's prescribed channel.

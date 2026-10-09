@@ -1,0 +1,16 @@
+{
+  "checkedAt": "2026-10-09T02:43:45.127Z",
+  "provider": "Unusual Whales",
+  "endpoint": "/api/option-trades/flow-alerts",
+  "ticker": "NVDA",
+  "verified": true,
+  "authenticated": true,
+  "upstreamStatus": 200,
+  "status": "verified",
+  "normalizedAlerts": 200,
+  "rejectedRows": 0,
+  "duplicateRows": 0,
+  "sessionDate": "2026-10-08",
+  "message": "Authenticated alerts loaded through the app’s proxy and normalizer.",
+  "evidenceScope": "Verification metadata only. No API token, alert identifiers, prices or raw response are retained."
+}

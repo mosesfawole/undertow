@@ -1,6 +1,6 @@
 # Hackathon1: Undertow — Follow the Evidence
 
-Draft entry. Not submitted. Authenticated API verification remains pending.
+Draft entry. Not submitted. Authenticated API access and analysis verified on 9 October 2026.
 
 ## What it does
 
@@ -39,16 +39,15 @@ For personal API use, copy `.env.example` to `.env`, set `UW_API_KEY`, restart, 
 
 ## Verification and limits
 
-- 22 automated tests pass: parsing, missing/inconsistent fields, multi-leg handling, replay boundaries, influence rankings, case roundtrips and malformed files, and mocked API/security/error paths.
+- 28 automated tests pass: parsing, missing/inconsistent fields, multi-leg handling, replay boundaries, influence rankings, case roundtrips and malformed files, mocked API/security/error paths, and a metadata-only connection checker.
 - Browser checks cover scenario application, actual .json download and reimport, desktop and 390px mobile layouts, filters and replay boundaries.
-- **Real authenticated UW request: pending API access.** The adapter has been tested against the documented response shape with mocks.
+- **Real authenticated UW request passed on 9 October 2026:** 200 normalized NVDA alerts, no rejected or duplicate rows. Statistics, linked narrative, every-alert removal, replay subsets, in-memory case roundtrip and Markdown export passed against the live sample. [Connection metadata](docs/live-api-check.json) · [Analysis metadata](docs/live-analysis-check.json).
 - All published observations and screenshots are synthetic. Licensed API snapshots are for personal local use unless redistribution is permitted.
 - The ±20% balance thresholds are descriptive heuristics. No price predictions, calibrated confidence, returns, or trader-intent claims.
 
 ## Remaining entry steps
 
-1. Obtain UW API access (trial keys are eligible), verify one real request, and update the validation statement above.
-2. Confirm the exact cutoff with the organizer. The official page, checked 8 October 2026, still says only “one month.” Hacklist's 23 October listing is not official confirmation.
-3. Post the entry with screenshots and repository link in the organizer's `vibe-and-api-projects` channel using the `Hackathon1:` title prefix.
+1. Confirm the exact cutoff with the organizer. The official page, checked 9 October 2026, still says only “one month.” Hacklist's 23 October listing is not official confirmation.
+2. Post the entry with screenshots and repository link in the organizer's `vibe-and-api-projects` channel using the `Hackathon1:` title prefix.
 
 [Official event instructions](https://unusualwhales.com/information/2026-unusual-whales-hackathon)
